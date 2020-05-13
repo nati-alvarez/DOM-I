@@ -44,7 +44,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 //Put appropriate text in nav links
 const links = document.querySelectorAll("nav a");
-console.log(links);
 
 let count = 0;
 for(let key in siteContent.nav){
@@ -53,5 +52,12 @@ for(let key in siteContent.nav){
     count++;
   }
 }
+
+const ctaHeader = document.querySelector(".cta h1");
+ctaHeader.innerHTML = siteContent.cta.h1.split(" ").join("<br>");
+const ctaButton = document.querySelector(".cta button");
+ctaButton.textContent = siteContent.cta.button;
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent.cta["img-src"]);
 
 
