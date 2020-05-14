@@ -116,3 +116,6 @@ for(let i = 0; i < contactSection.length; i++){
       element.textContent = siteContent.contact.email
   }
 }
+
+const copyright = document.querySelector("footer p");
+copyright.textContent = siteContent.footer.copyright;
