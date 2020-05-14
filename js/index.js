@@ -97,3 +97,22 @@ for(let i = 0; i < bottomContent.length; i++){
     p.textContent = siteContent["main-content"]["vision-content"];
   }
 }
+
+const contactSection = Array.from(document.getElementsByClassName("contact")[0].children);
+
+for(let i = 0; i < contactSection.length; i++){
+  const element = contactSection[i];
+  switch (i){
+    case 0:
+      element.textContent = siteContent.contact["contact-h4"];
+      break;
+    case 1:
+      element.innerHTML = siteContent.contact.address.slice(0, 18) + "<br>" + siteContent.contact.address.slice(18) ;
+      break;
+    case 2:
+      element.textContent = siteContent.contact.phone
+      break;
+    default:
+      element.textContent = siteContent.contact.email
+  }
+}
