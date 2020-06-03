@@ -50,7 +50,6 @@ let count = 0;
 for(let key in siteContent.nav){
   if(key !== "img-src"){
     links[count].textContent = siteContent.nav[key];
-    // links[count].style.color = "green";
     count++;
   }
 }
